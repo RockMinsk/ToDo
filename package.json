@@ -1,6 +1,19 @@
 {
-  "name": "",
-  "version": "",
+  "name": "ToDo",
+  "version": "1.0.0",
+  "description": "Home Task from Dima",
+  "bugs": {
+  	"url": "https://github.com/RockMinsk/ToDo/issues",
+  	"email": "shytsikau.kiryl@gmail.com"
+  },
+  "author": {
+  	"name": "Kiryl Shytsikau",
+  	"email": "shytsikau.kiryl@gmail.com"
+  },
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/RockMinsk/ToDo"
+  },
   "dependencies": {
     "express": "^4.15.4"
   }
