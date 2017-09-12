@@ -1,0 +1,59 @@
+<body>
+	<button id="loadListButton">Load List</button>
+	<ul class="list"> </ul>
+
+
+	<script>
+		let data = [
+			{ name : "shirt", 	  done : true  }, 
+			{ name : "jeans", 	  done : false }, 
+			{ name : "shorts",    done : true  }, 
+			{ name : "cap", 	  done : false }, 
+			{ name : "sneakers",  done : true  }
+		];
+
+		let loadButton = document.getElementById("loadListButton");
+		let buyList   = document.getElementsByClassName("list")[0]; 
+		let isLoaded = false;
+
+		loadButton.addEventListener("click", loadList);
+
+
+		function loadList () {
+			if (isLoaded) {
+				removeChildNodes(buyList)
+			};
+
+			data.forEach(function(dataItem) {
+				buyList.appendChild( createListItem(dataItem) );
+			})
+
+			isLoaded = true;
+			loadButton.innerText = "Reload List";
+		};
+
+		function createListItem (dataItem) {
+			let li = document.createElement("li");
+			li.innerHTML = strikeIfDone(dataItem);
+			li.addEventListener("click", strike.bind(dataItem));
+
+			return li;
+		};
+
+		function strikeIfDone (dataItem) {
+			return dataItem.done ? "<strike>" + dataItem.name + "</strike>" : dataItem.name;
+		};
+
+		function removeChildNodes (parent) {
+			while (parent.hasChildNodes()) {
+				parent.removeChild(parent.lastChild);
+			};
+		};
+		
+		function strike (event) {
+			this.done = !this.done;
+			loadList();
+			console.log(this);
+		};
+	</script>
+</body></html>
