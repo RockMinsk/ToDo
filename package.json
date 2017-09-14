@@ -15,7 +15,8 @@
     "url": "https://github.com/RockMinsk/ToDo"
   },
   "dependencies": {
+    "body-parser": "^1.18.1",
     "express": "^4.15.4",
-    "jsonfile": "^4.0.0"
+    "jquery": "^3.2.1"
   }
 }
