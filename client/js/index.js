@@ -9,12 +9,11 @@ $.ajax({
     			li.innerHTML = '<div class="view"><input class="toggle" type="checkbox"><label>' + 
 					todo.title + '</label><button class="destroy"></button></div>' + 
 					'<input class="edit" value="' + todo.title + '">';
-				$todos.append(li);
+				$todos.append(li);		
 				});
-			}
-		});
 
-$('#new-todo').keydown(function (e) {
+			//SAVE
+			$('#new-todo').keydown(function (e) {
  				let key = e.which;
  				if(key == 13)  {
    					alert("uhuhuhuh");
@@ -22,11 +21,14 @@ $('#new-todo').keydown(function (e) {
    			});
 
             //TOOGLE
-$(".toggle").click(function(){
+			$(".toggle").click(function(){
     			alert("cccccc");
     			});
 
             //DELETE
-$(".destroy").click(function(){
+			$(".destroy").click(function(){
     			alert("bbbbbb");
     			});
+			};
+		});
+
