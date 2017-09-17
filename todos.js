@@ -1,7 +1,7 @@
 let todos = [
-	{id: 1, title: "todo 1", done: true},
-	{id: 2, title: "todo 2", done: false},
-	{id: 3, title: "todo 3", done: true}
+	{id: 1, title: "Buy Milk", done: true},
+	{id: 2, title: "Go to the cinema", done: false},
+	{id: 3, title: "Learn Javascript", done: true}
 ];
 
 const myModule = {
@@ -11,16 +11,24 @@ const myModule = {
 
 	addTodo: todo => todos.push(todo),
 
-	changeTodosStatus: id => {
+	changeTodoStatus: id => {
 		const todo = todos.find(todo => todo.id === id);
+		//console.log(id);
 		todo.done = !todo.done;
+
+		return todo;
+	},
+
+	changeTodosContent: title => {
+		const todo = todos.find(todo => todo.id === id);
+		todo.title = title;
 
 		return todo;
 	},
 
 	deleteTodo: id => todos = todos.filter(todo => todo.id !== id),
 
-	genId: () => todos[todos.length].id + 1
+	genId: () => todos[todos.length-1].id + 1
 };
 
 module.exports = myModule;

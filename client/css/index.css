@@ -706,14 +706,14 @@ label[for='toggle-all'] {
 	padding: 0;
 }
 
-#todo-list li.editing .edit {
+#todo-list li .editing .edit {
 	display: block;
 	width: 506px;
 	padding: 13px 17px 12px 17px;
 	margin: 0 0 0 43px;
 }
 
-#todo-list li.editing .view {
+#todo-list li .editing .view {
 	display: none;
 }
 
@@ -732,11 +732,11 @@ label[for='toggle-all'] {
 }
 
 #todo-list li .toggle:after {
-	content: url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"&gt;&lt;circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/&gt;&lt;/svg&gt;');
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>');
 }
 
 #todo-list li .toggle:checked:after {
-	content: url('data:image/svg+xml;utf8,&lt;svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"&gt;&lt;circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/&gt;&lt;path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/&gt;&lt;/svg&gt;');
+	content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>');
 }
 
 #todo-list li label {
